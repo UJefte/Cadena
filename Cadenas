@@ -1,0 +1,26 @@
+package com.mycompany.cadenas;
+import java.util.Scanner;
+
+public class Cadenas {
+   public static void main(String[] args) {
+      
+      // Se crea un objeto Scanner para capturar la entrada del usuario
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Ingrese un nombre, una profesión y una nacionalidad (Ejemplo: Uriel Profesor México): ");
+      
+      // Se captura la entrada del usuario y se almacena en la variable "cadena"
+      String cadena = sc.nextLine();
+      
+      // Se separa la cadena en sus componentes usando el método split() de la clase String
+      String[] componentes = cadena.split(" ");
+      
+      // Se extraen los componentes individuales de la cadena y se convierten a mayúsculas usando el método toUpperCase() de la clase String
+      String nombre = componentes[0].toUpperCase();
+      String profesion = componentes[1].toUpperCase();
+      String pais = componentes[2].toUpperCase();
+      
+      // Se muestra la salida esperada
+      System.out.println("Nombre: " + nombre);
+      System.out.println("Profesión: " + profesion);
+      System.out.println("País: " + pais);
+   }
